@@ -6,6 +6,16 @@
     <div class="form-inputs">
       <%= f.input :title %>
       <%= f.input :content %>
+      <%= f.input :content, input_html: { data: { voice_input_target: 'input' } } %>
+      <div class="my-4">
+        <span
+          data-action="click->voice-input#record"
+          class="record"
+          data-target="voice-input.startButton"
+        >
+          Start Recording
+        </span>
+      </div>
     </div>
 
     <div class="form-actions">
